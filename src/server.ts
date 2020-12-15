@@ -2,11 +2,11 @@ import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
 import { ApolloServer, SchemaDirectiveVisitor } from 'apollo-server';
 
-import CategoryResolver from './graphql/category/CategoryResolver';
+import GameResolver from './graphql/category/GameResolver';
 import './utils/connection';
 
 async function bootstrap() {
-	const schema = await buildSchema({ resolvers: [CategoryResolver] });
+	const schema = await buildSchema({ resolvers: [GameResolver] });
 
 	const server = new ApolloServer({ schema });
 

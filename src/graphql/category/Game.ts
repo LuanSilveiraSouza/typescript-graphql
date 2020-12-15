@@ -2,7 +2,7 @@ import { Field, ObjectType } from 'type-graphql';
 
 
 @ObjectType()
-class Category {
+class Game {
     @Field()
     _id: String;
     
@@ -10,7 +10,10 @@ class Category {
     name: String;
 
     @Field()
-    description: String;
+    platform: String;
+    
+    @Field()
+    year: Number;
 }
 
-export default Category;
+export default Game;
